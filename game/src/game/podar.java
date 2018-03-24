@@ -5,13 +5,13 @@ import java.awt.*;
 import java.awt.event.*;
 
 class podar {
-	private Image img;
+	public Image img;
 	public int x,y;
 	public Boolean act;
 	private Timer timerUpdate;
 
 	public podar(Image img) {
-		timerUpdate = new Timer(500,new ActionListener() {
+		timerUpdate = new Timer(25,new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				vniz();
 			}
@@ -27,7 +27,7 @@ class podar {
 	}
 	public void vniz() {
 		if(act==true) {
-			y+=6;
+			y+=3;
 		}
 		if((y+img.getHeight(null))>=470) {
 			timerUpdate.stop();
